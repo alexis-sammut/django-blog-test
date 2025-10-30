@@ -67,7 +67,7 @@ class PostViewsTests(TestCase):
         self.assertEqual(response.status_code, 302)  # Redirect after POST
         self.assertTrue(Post.objects.filter(title='New title').exists())
         
-    def  test_update_post_view(self):
+    def test_update_post_view(self):
         self.client.login(username='testuser', password='12345')
         url = reverse('post-update', kwargs={'pk': self.post.pk})
         response = self.client.get(url)
