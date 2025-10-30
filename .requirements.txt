@@ -9,6 +9,7 @@ Django==5.2.6
 django-anymail==13.1
 django-cloudinary-storage==0.3.0
 django-crispy-forms==2.4
+dotenv==0.9.9
 gunicorn==23.0.0
 idna==3.11
 packaging==25.0
