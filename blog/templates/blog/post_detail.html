@@ -1,13 +1,8 @@
 {% extends "blog/base.html" %}
 {% load static %}  {% block content %}   
     <article class="media content-section">
-        
-        {% if post.author.profile.image %}
-            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}"> 
-        {% else %}
-            <img class="rounded-circle article-img" src="{% static 'users/default.jpg' %}"> 
-        {% endif %}
-        <div class="media-body">
+        <img class="rounded-circle article-img" src="{{ post.author.profile.get_image.url }}">     
+            <div class="media-body">
                 <div class="article-metadata">
                     <a class="mr-2" href="#">{{ post.author }}</a>
                      <small class="text-muted">{{ object.date_posted|date:'dS, F, Y' }}</small>
